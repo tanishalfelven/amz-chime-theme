@@ -1,0 +1,171 @@
+:root {
+    --text-color: #bcbcc4;
+    --imp-text-color: #fff;
+    --bg-color: #112234;
+    --bg-highlight-color: #4c6786;
+
+    --chatbar-bg: #192d42;
+
+    --other-msg-fg: #e0e0e0;
+    --other-msg-bg: #44444c;
+
+    --current-msg-bg: #0f4347;
+
+    --at-mention-color: #a2bfde;
+    --url-color: #37d2db;
+
+    --input-bg-color: #274361;
+    --input-bg-highlight-color: #5178a3;
+
+    --scrollbar-bg-color: #060b10;
+    --scrollbar-thumb-color: #4c6786;
+
+    --typing-ind-bg: #44444c;
+    --typing-ind-fg: #c6d3d4;
+}
+
+/* Icon */
+.Icon {
+    color: var(--text-color);
+}
+
+/* Chatroom Bar */
+.PresenceAndName__nameText {
+    color: var(--imp-text-color);
+}
+
+.ChatContainer__top {
+    background-color: var(--chatbar-bg);
+
+    border: none;
+}
+
+/* Msg Bar */
+.ChatInput {
+    background-color: var(--chatbar-bg);
+
+    border: none;
+}
+
+.ChatInput__attachBtn,
+.ChatInput__emojiPicker,
+.ChatInput__elements {
+    background-color: var(--input-bg-color);
+}
+
+.ChatInput__elements {
+    border: none;
+}
+
+.ChatInput__attachBtn,
+.ChatInput__emojiPicker {
+    border-color: var(--input-bg-highlight-color);
+}
+
+/* Active Text */
+div.DraftEditor-root > div > div > div[data-contents="true"] {
+    color: var(--imp-text-color);
+}
+
+/* Chat Messages */
+.ChatMessage__right {
+    color: var(--text-color);
+}
+
+.ChatMessage__sender {
+    color: var(--imp-text-color);
+}
+
+.ChatMessage,
+.ChatContainer {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Mentions */
+.AtMention {
+    color: var(--at-mention-color);
+}
+
+/* Chat Msg urls */
+.ChatMessage__left a {
+    color: var(--url-color) !important;
+}
+
+/* Other User Messages */
+.ChatMessage__left {
+    color: var(--other-msg-fg);
+    background-color: var(--other-msg-bg);
+}
+
+/* Current User Msgs */
+.ChatMessage--sentByCurrentUser .ChatMessage__left {
+    background-color: var(--current-msg-bg);
+
+    border: none;
+}
+
+/* Date Separator */
+.ChatMessageDateSeparator__date, .ChatNewMessageSeparator__text {
+    color: var(--imp-text-color);
+}
+.ChatMessageDateSeparator, .ChatNewMessageSeparator {
+    background-color: var(--bg-color);
+}
+.ChatNewMessageSeparator::after, .ChatNewMessageSeparator::before,
+.ChatMessageDateSeparator::after, .ChatMessageDateSeparator::before {
+    background-color: var(--bg-highlight-color);
+}
+
+/* Typing Indicator */
+.TypingIndicator {
+    background-color: var(--bg-color);
+}
+
+.TypingIndicator__sender {
+    color: var(--imp-text-color);
+}
+
+.TypingIndicator__content {
+    background-color: var(--typing-ind-bg);
+}
+
+.Icon.TypingIndicator__icon {
+    color: var(--typing-ind-fg);
+}
+
+/* Search Box */
+.SearchInputBox, .SearchInputBox input {
+    background-color: var(--input-bg-color);
+
+    border: none;
+}
+
+/* Sidebar Toggle */
+.ContentToggle {
+    border: none;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+    background-color: transparent;
+    border-color: transparent;
+
+    width: 0.8em;
+}
+
+*::-webkit-scrollbar-button {
+    display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+
+    border-radius: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-bg-color);
+    
+    border-radius: 15px;
+}
