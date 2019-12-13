@@ -159,7 +159,7 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
 }
 
 /* Code Blocks */
-.ChatMessage__code, pre, code {
+.ChatMessage__code, pre, code, .ChatMessage__markdown > pre {
     background-color: var(--code-bg-color);
     color: var(--code-fg-color);
 
@@ -169,7 +169,7 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     font-family: var(--code-font);
 }
 
-.ChatMessage__markdown code {
+.ChatMessage__markdown > p > code {
     border: 1px solid var(--code-border-color);
 
     padding: 2px;
@@ -180,7 +180,8 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     background-color: transparent;
     border-color: transparent;
 
-    width: 0.8em;
+    width: 0.7em;
+    height: 0.7em;
 }
 
 *::-webkit-scrollbar-button {
