@@ -22,6 +22,10 @@
 
     --typing-ind-bg: #44444c;
     --typing-ind-fg: #c6d3d4;
+    
+    --code-border-color: #4c6786;
+    --code-bg-color: #112234;
+    --code-fg-color: #bcbcc4;
 }
 
 /* Icon */
@@ -144,6 +148,28 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
 /* Sidebar Toggle */
 .ContentToggle {
     border: none;
+}
+
+/* New Messsage Search */
+.SearchableEditor {
+    background-color: var(--input-bg-color);
+
+    border: none;
+}
+
+/* Code Blocks */
+.ChatMessage__code, pre, code {
+    background-color: var(--code-bg-color);
+    color: var(--code-fg-color);
+
+    border-color: var(--code-border-color);
+    border-radius: 5px;
+}
+
+.ChatMessage__markdown code {
+    border: 1px solid var(--code-border-color);
+
+    padding: 2px;
 }
 
 /* Scrollbar */
