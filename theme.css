@@ -26,6 +26,7 @@
     --code-border-color: #4c6786;
     --code-bg-color: #112234;
     --code-fg-color: #bcbcc4;
+    --code-font: "Dank Mono";
 }
 
 /* Icon */
@@ -164,6 +165,8 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
 
     border-color: var(--code-border-color);
     border-radius: 5px;
+
+    font-family: var(--code-font);
 }
 
 .ChatMessage__markdown code {
