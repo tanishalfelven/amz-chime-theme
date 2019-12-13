@@ -175,6 +175,12 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     padding: 2px;
 }
 
+/* Emojis */
+.Emoji {
+    height: 1.6em;
+    width: 1.6em;
+}
+
 /* Scrollbar */
 *::-webkit-scrollbar {
     background-color: transparent;
