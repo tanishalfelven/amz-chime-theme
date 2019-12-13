@@ -181,6 +181,15 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     width: 1.6em;
 }
 
+/* Attachments Screen */
+.AttachmentViewerContainer__headerTitle {
+    color: var(--imp-text-color);
+}
+
+.Modal__content.Modal__content--FULLSCREEN.AttachmentViewerContainer {
+    background-color: var(--bg-color);
+}
+
 /* Scrollbar */
 *::-webkit-scrollbar {
     background-color: transparent;
