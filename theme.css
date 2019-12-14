@@ -90,6 +90,8 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
 /* Mentions */
 .AtMention {
     color: var(--at-mention-color);
+
+    background-color: transparent;
 }
 
 /* Chat Msg urls */
@@ -173,6 +175,12 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     border: 1px solid var(--code-border-color);
 
     padding: 2px;
+}
+
+/* Emojis */
+.Emoji {
+    height: 1.6em;
+    width: 1.6em;
 }
 
 /* Attachments Screen */
