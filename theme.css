@@ -27,6 +27,10 @@
     --code-bg-color: #112234;
     --code-fg-color: #bcbcc4;
     --code-font: "Dank Mono";
+
+    --emoji-background: #171717;
+    --emoji-text: #9ec3b9;
+    --emoji-border: #273e3a;
 }
 
 /* Icon */
@@ -144,8 +148,53 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
 /* Search Box */
 .SearchInputBox, .SearchInputBox input {
     background-color: var(--input-bg-color);
+    color: var(--text-color);
 
     border: none;
+}
+
+/* Emoji Box */
+.EmojiSuggestion {
+    border-color: var(--emoji-border);
+}
+
+.emoji-mart {
+    background-color: var(--emoji-background);
+    border-color: var(--emoji-border);
+}
+
+.emoji-mart-category-label > span {
+    background-color: var(--emoji-background);
+    color: var(--emoji-text);
+}
+
+.emoji-mart-bar {
+    border-color: var(--emoji-border);
+}
+
+.emoji-mart-search input {
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+
+    border: none;
+}
+
+.emoji-mart-search input::placeholder {
+    color: var(--text-color);
+}
+
+.emoji-mart-search-icon svg {
+    fill: var(--text-color);
+}
+
+.emoji-mart-emoji::before {
+    background-color: transparent !important;
+}
+
+/* Emojis */
+.Emoji {
+    height: 1.6em;
+    width: 1.6em;
 }
 
 /* Sidebar Toggle */
@@ -175,12 +224,6 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     border: 1px solid var(--code-border-color);
 
     padding: 2px;
-}
-
-/* Emojis */
-.Emoji {
-    height: 1.6em;
-    width: 1.6em;
 }
 
 /* Attachments Screen */
@@ -215,4 +258,8 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     background-color: var(--scrollbar-bg-color);
     
     border-radius: 15px;
+}
+
+*::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
