@@ -14,8 +14,12 @@
     --at-mention-color: #a2bfde;
     --url-color: #37d2db;
 
+    --popup-border-radius: 1em;
+
     --input-bg-color: #274361;
     --input-bg-highlight-color: #5178a3;
+
+    --search-contact-result-color: #2b4b6d;
 
     --scrollbar-bg-color: #060b10;
     --scrollbar-thumb-color: #4c6786;
@@ -47,6 +51,11 @@
     background-color: var(--chatbar-bg);
 
     border: none;
+}
+
+/* Contact Search Bar */
+#searchResultDropdownList span.PresenceAndName__nameText {
+    color: var(--search-contact-result-color);
 }
 
 /* Msg Bar */
@@ -92,10 +101,34 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
 }
 
 /* Mentions */
-.AtMention {
+.AtMention, .Mention {
     color: var(--at-mention-color);
 
     background-color: transparent;
+}
+
+/* Mention Suggestions */
+.MentionSuggestions {
+    background-color: var(--chatbar-bg);
+    color: var(--text-color);
+
+    border-color: var(--bg-highlight-color);
+
+    border-radius: var(--popup-border-radius);
+}
+
+.MentionSuggestions .MentionSuggestion--focused {
+    background-color: var(--bg-highlight-color);
+}
+
+.MentionSuggestions .MentionSuggestion:first-child {
+    border-top-left-radius: var(--popup-border-radius);
+    border-top-right-radius: none;
+}
+
+.MentionSuggestions .MentionSuggestion:last-child {
+    border-bottom-left-radius: var(--popup-border-radius);
+    border-bottom-right-radius: none;
 }
 
 /* Chat Msg urls */
