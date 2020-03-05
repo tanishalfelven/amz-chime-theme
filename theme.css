@@ -16,6 +16,10 @@
 
     --popup-border-radius: 1em;
 
+    --table-border-radius: 5px;
+    --table-header-text-color: #5d7190;
+    --table-body-text-color: #a7bad8;
+
     --input-bg-color: #274361;
     --input-bg-highlight-color: #5178a3;
 
@@ -35,6 +39,50 @@
     --emoji-background: #171717;
     --emoji-text: #9ec3b9;
     --emoji-border: #273e3a;
+}
+
+/* Hide this sidebar junk cus I don't want to see it anymore */
+.JoinableMeetingsList, .Sidebar__homeLink, .AppMenu {
+    display: none;
+}
+
+/* Make sidebar spacing a bit tighter */
+.RoomListItemContainer__link, .ConversationListItemContainer__link {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.RoomListItemContainer__link:focus, .ConversationListItemContainer__link:focus {
+    border: none !important;
+} 
+
+.ConversationListItemContainer__link, .NewMessageListItem__link {
+    padding: 0;
+}
+
+.NewMessageListItem__link span {
+    padding-left: 10px;
+}
+
+.ConversationListItemContainer {
+    width: 50%;
+}
+
+.NewMessageListItem {
+    width: 50%;
+    white-space: nowrap;
+}    
+
+.ConversationList__items {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Favorite List with lil margin just so the page don't have that FUNK */
+.FavoriteList {
+	margin-top: 20px;
 }
 
 /* Icon */
@@ -259,6 +307,48 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     padding: 2px;
 }
 
+/* MD Table */
+.ChatMessage__markdown table {
+    width: 100%;
+
+    margin-bottom: 0.1rem;
+}
+
+.ChatMessage__markdown table tr {
+    background-color: var(--code-bg-color) !important;
+}
+
+.ChatMessage__markdown table th {
+    color: var(--table-header-text-color);
+}
+
+.ChatMessage__markdown table td {
+    color: var(--table-body-text-color);
+}
+
+.ChatMessage__markdown table th,
+.ChatMessage__markdown table tr,
+.ChatMessage__markdown table td {
+    border: none;
+    text-align: center;
+}
+
+.ChatMessage__markdown thead tr th:first-child {
+    border-top-left-radius: var(--table-border-radius);
+}
+
+.ChatMessage__markdown thead tr th:last-child {
+    border-top-right-radius: var(--table-border-radius);
+}
+
+.ChatMessage__markdown table tr:last-child td:first-child {
+    border-bottom-left-radius: var(--table-border-radius);
+}
+
+.ChatMessage__markdown table tr:last-child td:last-child {
+    border-bottom-right-radius: var(--table-border-radius);
+}
+
 /* Attachments Screen */
 .AttachmentViewerContainer__headerTitle {
     color: var(--imp-text-color);
@@ -266,6 +356,54 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
 
 .Modal__content.Modal__content--FULLSCREEN.AttachmentViewerContainer {
     background-color: var(--bg-color);
+}
+
+/* Phonetool Mod */
+.ChatMessage {
+    padding-left: 3px;
+}
+
+.GM_PhoneTool {
+    padding-top: 6px !important;
+    margin-left: 0;
+}
+
+.GM__PhoneTool__image {
+	transform: translateY(10%) scale(.98);
+    
+    width: 2.5rem !important;
+    max-width: unset;
+    height: 2.5rem;
+    
+    border: none !important;
+    border-radius: 100%;
+    
+    object-fit: cover;
+    object-position: 50% 35%;
+}
+
+a.GM__PhoneTool__link[href="https://phonetool.amazon.com/users/newtanis"]::after {
+    content: "NN";
+    position: absolute;
+    display: block;
+    
+    width: 2em;
+    height: 1.1rem;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    color: white;
+    text-align: center;
+    line-height: 100%;
+    font-size: 1.1rem;
+}
+
+img.GM__PhoneTool__image[src="https://internal-cdn.amazon.com/badgephotos.amazon.com/?uid=newtanis"] {
+    visibility: hidden;
 }
 
 /* Scrollbar */
