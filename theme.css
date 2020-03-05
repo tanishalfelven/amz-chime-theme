@@ -382,30 +382,6 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     object-position: 50% 35%;
 }
 
-a.GM__PhoneTool__link[href="https://phonetool.amazon.com/users/newtanis"]::after {
-    content: "NN";
-    position: absolute;
-    display: block;
-    
-    width: 2em;
-    height: 1.1rem;
-    
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    
-    color: white;
-    text-align: center;
-    line-height: 100%;
-    font-size: 1.1rem;
-}
-
-img.GM__PhoneTool__image[src="https://internal-cdn.amazon.com/badgephotos.amazon.com/?uid=newtanis"] {
-    visibility: hidden;
-}
-
 /* Scrollbar */
 *::-webkit-scrollbar {
     background-color: transparent;
