@@ -41,6 +41,25 @@
     --emoji-border: #273e3a;
 }
 
+/* Make Bubbles Not Full Size */
+.ChatMessage__content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ChatMessage__left {
+    display: inline-block;
+    margin-right: auto;
+
+    flex: none;
+    width: auto;
+    max-width: 90%;
+}
+
+.ChatMessage__left > div, .ChatMessage__left > div > div {
+    display: inline-block;
+}
+
 /* Hide this sidebar junk cus I don't want to see it anymore */
 .JoinableMeetingsList, .Sidebar__homeLink, .AppMenu {
     display: none;
@@ -146,6 +165,10 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
 .ChatContainer {
     color: var(--text-color);
     background-color: var(--bg-color);
+}
+
+.ChatMessageList__messagesWrapper {
+	background-color: var(--bg-color);
 }
 
 /* Mentions */
@@ -380,6 +403,30 @@ div.DraftEditor-root > div > div > div[data-contents="true"] {
     
     object-fit: cover;
     object-position: 50% 35%;
+}
+
+a.GM__PhoneTool__link[href="https://phonetool.amazon.com/users/newtanis"]::after {
+    content: "NN";
+    position: absolute;
+    display: block;
+    
+    width: 2em;
+    height: 1.1rem;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    color: white;
+    text-align: center;
+    line-height: 100%;
+    font-size: 1.1rem;
+}
+
+img.GM__PhoneTool__image[src="https://internal-cdn.amazon.com/badgephotos.amazon.com/?uid=newtanis"] {
+    visibility: hidden;
 }
 
 /* Scrollbar */
